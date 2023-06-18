@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "firstname": "Amal",
+      "lastname": "Abdur",
+      "email": "amal@gmail.com",
+      "password": "1234Amal",
+      "id": 3
+    }
+  ],
+  "cards": [
+    {
+      "id": "879145e9-3740-4d9a-a0c7-42e9cd6c825f",
+      "user_id": 3,
+      "name": "Visa",
+      "balance": 800000,
+      "leftColor": "#04ff00",
+      "rightColor": "#ff0000",
+      "currency": "USD"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "c084c634-c0ce-408a-9d7f-41b0455d425f",
+      "user_id": 3,
+      "date": "2023-6-18 12:20",
+      "card": {
+        "id": "879145e9-3740-4d9a-a0c7-42e9cd6c825f",
+        "name": "Visa",
+        "balance": "1000000",
+        "leftColor": "#04ff00",
+        "rightColor": "#ff0000"
+      },
+      "amount": "200000",
+      "category": "food"
+    }
+  ]
+}
