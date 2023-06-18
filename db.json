@@ -6,6 +6,13 @@
       "email": "amal@gmail.com",
       "password": "1234Amal",
       "id": 3
+    },
+    {
+      "firstname": "Lakiii",
+      "lastname": "Clever",
+      "email": "asa2229291@gmail.com",
+      "password": "1234Amal",
+      "id": 4
     }
   ],
   "cards": [
@@ -17,6 +24,24 @@
       "leftColor": "#04ff00",
       "rightColor": "#ff0000",
       "currency": "USD"
+    },
+    {
+      "id": "a6dbe87b-1c6c-4349-8025-05f24ab4e860",
+      "user_id": 4,
+      "name": "visa",
+      "balance": 20000,
+      "leftColor": "#2b00ff",
+      "rightColor": "#ff0000",
+      "currency": "USD"
+    },
+    {
+      "id": "ef98d411-4998-49fd-ad79-b027296c9d54",
+      "user_id": 4,
+      "name": "amal",
+      "balance": "34000",
+      "leftColor": "#ff00d0",
+      "rightColor": "#00ff9d",
+      "currency": "dirhum"
     }
   ],
   "transactions": [
@@ -32,6 +57,20 @@
         "rightColor": "#ff0000"
       },
       "amount": "200000",
+      "category": "food"
+    },
+    {
+      "id": "1e3caba0-25ee-4307-8cc9-ecebe0f055ac",
+      "user_id": 4,
+      "date": "2023-6-18 16:26",
+      "card": {
+        "id": "a6dbe87b-1c6c-4349-8025-05f24ab4e860",
+        "name": "visa",
+        "balance": "50000",
+        "leftColor": "#2b00ff",
+        "rightColor": "#ff0000"
+      },
+      "amount": "30000",
       "category": "food"
     }
   ]

@@ -20,7 +20,7 @@ getData('/transactions/?user_id=' + userData.id)
    }
 })
 
-getData('/transactions/')
+getData('/transactions/?user_id=' + userData.id)
    .then(res => {
       if (res.status == 200 || res.status === 201) {
          if (body !== null) reloadTable(res.data, body);
