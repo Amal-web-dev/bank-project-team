@@ -7,6 +7,10 @@ let inner = document.querySelector('.card')
 let h3 = document.querySelector('h3')
 let p = document.querySelector('p')
 let localedUser = JSON.parse(localStorage.getItem('user')) || {}
+let id = document.querySelector('.id')
+let name = document.querySelector('.name')
+let user_id = document.querySelector('.user_id')
+let balance = document.querySelector('.balance')
 
 getData('/cards/' + card_id)
 .then(res => {
@@ -17,6 +21,12 @@ getData('/cards/' + card_id)
       color()
       function color() {
             inner.style.background = `linear-gradient(to right, ${color1}, ${color2})`;            
+            h3.innerHTML = data.name
+            p.innerHTML = data.currency
+            id.innerHTML = "your id:" + data.id.slice(0, 10)
+            name.innerHTML = "your card_name:" + data.name
+            balance.innerHTML = "your balance:" + data.balance
+            user_id.innerHTML = 'your user_id:' + data.user_id
       }
      
 
@@ -50,7 +60,7 @@ function anime() {
       //-----------------------------------------
     
       var counter = 0;
-      var updateRate = 10;
+      var updateRate = 20;
       var isTimeToUpdate = function() {
         return counter++ % updateRate === 0;
       };
@@ -77,8 +87,8 @@ function anime() {
       var update = function(event) {
         mouse.updatePosition(event);
         updateTransformStyle(
-          (mouse.y / inner.offsetHeight / 1).toFixed(2),
-          (mouse.x / inner.offsetWidth / 2).toFixed(2)
+          (mouse.y / inner.offsetHeight / 2).toFixed(2),
+          (mouse.x / inner.offsetWidth / 8).toFixed(2)
         );
       };
     
@@ -102,3 +112,12 @@ function anime() {
       
     }
 })
+
+function flipCard() {
+  inner.classList.toggle('flip');
+}
+
+inner.addEventListener('click', flipCard);
+
+
+
