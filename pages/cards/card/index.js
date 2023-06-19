@@ -11,13 +11,15 @@ let id = document.querySelector('.id')
 let name = document.querySelector('.name')
 let user_id = document.querySelector('.user_id')
 let balance = document.querySelector('.balance')
+let mainImg = document.querySelector('.main')
 
 getData('/cards/' + card_id)
 .then(res => {
       let data = res.data
-      console.log(res);
       const color1 = data.leftColor;
       const color2 = data.rightColor;
+
+      console.log(data);
       color()
       function color() {
             inner.style.background = `linear-gradient(to right, ${color1}, ${color2})`;            
@@ -119,5 +121,7 @@ function flipCard() {
 
 inner.addEventListener('click', flipCard);
 
-
+mainImg.onclick = () => {
+  location.assign('/pages/cards/')
+}
 

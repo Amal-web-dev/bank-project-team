@@ -123,8 +123,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/images/Ep0xL6rVQAIARVt.png);
-  background-size: 80%;
+  background-image: url(/images/credit-card-bearbeitet-backside.jpg);
+  background-size: 100%;
+  border-radius: 15px;
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: none;
@@ -138,4 +139,12 @@ body {
 
 .left-side {
   margin-top: 20px;
+}
+
+.main {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+  height: 35px;
 }
